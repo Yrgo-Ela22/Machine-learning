@@ -6,7 +6,7 @@
 
 /********************************************************************************
  * @brief Performs predictions with referenced regression model and prints the
- *        result in the terminal.
+ *        result to selected output stream.
  * 
  * @param model
  *        Reference to regression model to perform prediction with.

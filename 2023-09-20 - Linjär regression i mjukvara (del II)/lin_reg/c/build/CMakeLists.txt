@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20) 
+project(lin_reg_example_c)             
+include_directories(../inc)         
+add_executable(run_lin_reg_example_c ../src/main.c ../src/lin_reg.c)
+target_compile_options(run_lin_reg_example_c PRIVATE -Wall -Werror) 
+set_target_properties(run_lin_reg_example_c PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../)

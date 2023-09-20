@@ -15,9 +15,9 @@ extern "C" {
  * @brief Struct for implementing linear regression models.
  ********************************************************************************/
 struct lin_reg {
-    const double* train_in;  /* Input values (x). */
-    const double* train_out; /* Reference values (y_ref). */
-    size_t* train_order;     /* Stores indexes for training sets. */
+    const double* train_in;  /* Pointer to array storing input values (x). */
+    const double* train_out; /* Pointer to array storing reference values (y_ref). */
+    size_t* train_order;     /* Pointer to array storing indexes for training sets. */
     size_t num_sets;         /* The number of stored training sets. */
     double weight;           /* k-value. */
     double bias;             /* m-value. */

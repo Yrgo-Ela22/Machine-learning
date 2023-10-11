@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+project(neural_network_cpp)
+include_directories(../inc)
+add_executable(run ../src/main.cpp ../src/dense_layer.cpp)
+target_compile_options(run PRIVATE -Wall -Werror)
+set_target_properties(run PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../)

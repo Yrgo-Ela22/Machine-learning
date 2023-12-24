@@ -17,14 +17,14 @@ double GetActFuncDelta(const double output, const enum ActFunc act_func) {
 } /* namespace */
 
 DenseLayer::DenseLayer(const std::size_t num_nodes,
-    const std::size_t num_weights_per_node,
-    const enum ActFunc act_func) {
+                       const std::size_t num_weights_per_node,
+                       const enum ActFunc act_func) {
     Init(num_nodes, num_weights_per_node, act_func);
 }
 
 void DenseLayer::Init(const std::size_t num_nodes,
-    const std::size_t num_weights_per_node,
-    const enum ActFunc act_func) {
+                      const std::size_t num_weights_per_node,
+                      const enum ActFunc act_func) {
     utils::random::Init();
     output_.resize(num_nodes, 0);
     utils::random::InitVector<double>(bias_, num_nodes, 0, 1);

@@ -59,6 +59,17 @@ class DenseLayer {
     }
 
     /********************************************************************************
+     * @brief Initializes dense layer with specified number of nodes and weights.
+     * 
+     * @param num_nodes            The number of nodes in the layer.
+     * @param num_weights_per_node The number of weights per node in the layer.
+     * @param act_func             Activation function (default = ReLU).
+     ********************************************************************************/
+    void Init(const std::size_t num_nodes, 
+              const std::size_t num_weights_per_node,
+              const enum ActFunc act_func = ActFunc::kRelu);
+
+    /********************************************************************************
      * @brief Updates the output of all nodes in the layer.
      * 
      * @param inputs Reference to vector holding the new input values.

@@ -64,11 +64,14 @@ min = (lambda x, y: x if x < y else y)
 max = (lambda x, y: x if x > y else y)
 
 # ------------------------------------------------------------------------------
-def toContainer(arg) -> list:
+def toContainer(arg) -> list | tuple:
     return arg if type(arg) is list or type(arg) is tuple else [arg]
     
 # ------------------------------------------------------------------------------
-def printFloats(data: tuple[float], numDecimals: int = 1, space: str = " ", end = "\n") -> None:
+def printFloats(data: tuple[float], 
+                numDecimals: int = 1, 
+                space: str = " ", 
+                end: str = "\n") -> None:
     for i in data:
         print(round(i, numDecimals), end = space)
     print(end, end="")

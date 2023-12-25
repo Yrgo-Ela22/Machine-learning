@@ -35,7 +35,7 @@ class NeuralNetwork:
 
     # ------------------------------------------------------------------------------ 
     def train(self, numEpochs: int, learningRate: float = 0.01) -> bool:
-        if self.numTrainingSets() == 0 or numEpochs == 0 or learningRate <= 0: 
+        if self.numTrainingSets() == 0 or numEpochs <= 0 or learningRate <= 0: 
             return False
         for i in range(numEpochs):
             self._randomizeTrainingOrder()

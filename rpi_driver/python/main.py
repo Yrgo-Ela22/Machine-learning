@@ -13,7 +13,7 @@ def blinkLeds(leds: tuple[Led], blinkSpeedMs: Number) -> None:
     disableLeds(leds)
     for led in leds:
         led.on()
-        led.delay(blinkSpeedMs)
+        led.delayMs(blinkSpeedMs)
         led.off()
 
 # ------------------------------------------------------------------------------

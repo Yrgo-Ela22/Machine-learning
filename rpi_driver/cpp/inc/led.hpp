@@ -4,8 +4,10 @@
 
 #include "gpiod_utils.h"
 
-namespace yrgo {
-namespace rpi {
+namespace yrgo 
+{
+namespace rpi 
+{
 
 class Led 
 {

@@ -1,7 +1,9 @@
 #include "led.hpp"
 
-namespace yrgo {
-namespace rpi {
+namespace yrgo 
+{
+namespace rpi 
+{
 
 // -----------------------------------------------------------------------------
 Led::Led() = default;
@@ -24,8 +26,8 @@ bool Led::init(const std::uint8_t pin, const bool enabled)
 {
     if (myLine != nullptr) { return false; }
     myLine = gpiod_line_new(pin, GPIOD_LINE_DIRECTION_OUT);
-    if (enabled) { on(); }
-    return true;
+    if (myLine != nullptr && enabled) { on(); }
+    return myLine != nullptr;
 }
 
 // -----------------------------------------------------------------------------

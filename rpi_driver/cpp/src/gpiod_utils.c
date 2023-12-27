@@ -53,6 +53,7 @@ bool gpiod_line_event_detected(struct gpiod_line* self,
     const uint8_t old_val = *previous_input;
     const uint8_t new_val = gpiod_line_get_value(self);
     *previous_input = new_val;
+    
     if (old_val == new_val) { return false; } 
 
     if (edge == GPIOD_LINE_EDGE_RISING) 

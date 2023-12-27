@@ -1,3 +1,4 @@
+#include "button.hpp"
 #include "led.hpp"
 
 namespace rpi = yrgo::rpi;
@@ -6,10 +7,14 @@ namespace rpi = yrgo::rpi;
 int main()
 {
     rpi::Led led1{17};
+    rpi::Button button1{27};
     
     while (1)
     {
-        led1.blink(100);
+        if (button1.isEventDetected())
+        {
+            led1.toggle();
+        }
     }
     return 0;
 }

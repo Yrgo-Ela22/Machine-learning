@@ -11,6 +11,7 @@ using namespace yrgo::machine_learning;
 
 namespace {
 
+// --------------------------------------------------------------------------------
 void Train(DenseLayer& layer, 
            const std::vector<double>& inputs, 
            const std::vector<double>& outputs,
@@ -23,6 +24,7 @@ void Train(DenseLayer& layer,
     }
 }
 
+// --------------------------------------------------------------------------------
 void Print(const DenseLayer& layer, 
            const std::size_t num_decimals = 0,
            std::ostream& ostream = std::cout) {

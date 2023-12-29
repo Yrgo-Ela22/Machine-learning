@@ -19,10 +19,11 @@ enum class ActFunc { kRelu, kTanh };
 
 class DenseLayer {
   public:
+  
     /********************************************************************************
-     * @brief Creates empty dense layer.
+     * @brief Default constructor deleted.
      ********************************************************************************/
-    DenseLayer(void) = default;
+    DenseLayer(void) = delete;
 
     /********************************************************************************
      * @brief Creates new dense layer with specified number of nodes and weights.

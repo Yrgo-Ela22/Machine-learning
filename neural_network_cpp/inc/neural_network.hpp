@@ -5,9 +5,11 @@
 
 #include <iomanip>  
 #include <iostream> 
+#include <type_traits>
 #include <vector>   
 
 #include <dense_layer.hpp>
+#include <utils.hpp>
 
 namespace yrgo {
 namespace machine_learning {
@@ -73,7 +75,6 @@ public:
      ********************************************************************************/
     bool AddTrainingData(const std::vector<std::vector<double>>& train_input,
                          const std::vector<std::vector<double>>& train_output);
-
     
     /********************************************************************************
      * @brief Trains the neural network.
@@ -107,8 +108,16 @@ public:
                           std::ostream& ostream = std::cout);
 
 private:
-    DenseLayer hidden_layer_;
-    DenseLayer output_layer_;
+
+    void CheckNumTrainingSets();
+    void InitTrainOrderVector();
+    void RandomizeTrainingOrder();
+    void Feedforward(const std::vector<double>& input);
+    void Backpropagate(const std::vector<double>& reference);
+    void Optimize(const std::vector<double>& input, const double learning_rate);
+
+    DenseLayer hidden_layer_ = DenseLayer(3, 2, ActFunc::kRelu);
+    DenseLayer output_layer_ = DenseLayer(1, 3, ActFunc::kTanh);
     std::vector<std::vector<double>> train_input_{};
     std::vector<std::vector<double>> train_output_{};
     std::vector<std::size_t> train_order_{};

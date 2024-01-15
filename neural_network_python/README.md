@@ -1,10 +1,8 @@
 # Neural network implementation in Python
-
 Enkelt neuralt nätverk implementerat i Python.  
-Nätverket består av två ingångar, en utgång samt ett dolt lager bestående av två noder. 
-I det dolda lagret används tanh som aktiveringsfunktion, medan ReLU används i utgångslagret.  
 
-Nätverket tränas till att detekteras ett två-bitars XOR-mönster, där AB utgör indata och X utgör utdata.
+Nätverket tränas tränas till att prediktera att 2-bits XOR-mönster såsom visas nedan,   
+där AB utgör indata och X utgör nätverkets utdata:
 
 |   AB   |   X   |   
 | :----: | :---: |  
@@ -13,5 +11,5 @@ Nätverket tränas till att detekteras ett två-bitars XOR-mönster, där AB utg
 |   10   |   1   |  
 |   11   |   0   |  
 
-Nätverket tränas under 1000 epoker med en lärhastighet på 10 %.  
+Nätverket tränas under 200 000 epoker med en lärhastighet på 10 %.  
 Efter träning predikterar nätverket med 100 % precision.

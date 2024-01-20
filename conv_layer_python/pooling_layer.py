@@ -67,11 +67,13 @@ class PoolingLayer2D:
 
     # ------------------------------------------------------------------------------
     def _iterationWidth(self, input: tuple[tuple[float]]) -> int:
-        return math.ceil(len(input) / self.size())
+        return int(len(input) / self.size() + 1) if self.size() < len(input) \
+            else int(len(input) / self.size())
         
     # ------------------------------------------------------------------------------
     def _iterationHeight(self, input: tuple[tuple[float]]) -> int:
-        return math.ceil(len(input[0]) / self.size())
+        return int(len(input[0]) / self.size() + 1) if self.size() < len(input[0]) \
+            else int(len(input[0]) / self.size())
     
     # ------------------------------------------------------------------------------
     def _isWithinRange(self, input: tuple[tuple[float]], x: int, y: int) -> bool:

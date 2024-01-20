@@ -70,7 +70,6 @@ std::size_t numPaddings(const std::vector<T>& kernel);
 template <typename T>
 std::size_t numPaddings(const std::vector<std::vector<T>>& kernel);
 
-
 /********************************************************************************
  * @brief Provides a padded copy of referenced vector.
  * 
@@ -86,7 +85,6 @@ template <typename T>
 std::vector<T> pad(const std::vector<T>& data, 
                    const std::size_t numPaddings = 1,
                    const T padValue = 0);
-
 
 /********************************************************************************
  * @brief Provides a padded copy of referenced vector.

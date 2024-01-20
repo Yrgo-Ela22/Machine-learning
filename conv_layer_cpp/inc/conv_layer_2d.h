@@ -1,5 +1,5 @@
 /********************************************************************************
- * @brief Implementation of two-dimensional convolutional layers  to filter
+ * @brief Implementation of two-dimensional convolutional layers to filter
  *        attributes from images.
  ********************************************************************************/
 #pragma once
@@ -112,7 +112,6 @@ public:
     void optimize(const double learningRate = 0.01);
 
 protected:
-
     void initKernel(const std::size_t kernelSize);
     std::vector<std::vector<double>> pad(const std::vector<std::vector<double>>& input);
     std::size_t numPaddings() const;

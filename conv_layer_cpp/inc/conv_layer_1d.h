@@ -104,7 +104,6 @@ public:
      ********************************************************************************/
     bool optimize(const double learningRate = 0.01);
 
-
 protected:
 
     void initKernel(const std::size_t kernelSize);

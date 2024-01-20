@@ -1,4 +1,4 @@
 # Convolutional layers in C++
 
-Implementation of 1D and 2D convolutional layers in C++.  
-Also contains utility functions and a flatten layer implementation.  
+Implementation av en- och två-dimensionella konvolutionella lager i C++.  
+Innehåller också implementation av hjälpfunktioner samt flatten-lager.
